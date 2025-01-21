@@ -32,7 +32,7 @@ public class PersonService {
         person.setAddress("São Paulo - SP - Brasil");
         person.setGender("Male");
         return repository.findById(id)
-                .orElseThrow(() -> new ResolutionException("No records found for this add."));
+                .orElseThrow(() -> new ResolutionException("No records found for this ID!"));
     }
 
     public Person createPerson (Person person) {
@@ -42,7 +42,7 @@ public class PersonService {
 
     public Person updatePerson (Person person) {
         Person entity = repository.findById(person.getId())
-                .orElseThrow(() -> new ResolutionException("No records found for this add."));
+                .orElseThrow(() -> new ResolutionException("No records found for this ID!"));
 
         entity.setFirstName(person.getFirstName());
         entity.setLastName(person.getLastName());
