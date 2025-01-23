@@ -14,7 +14,7 @@ public class PersonVO implements Serializable {
     private String address;
     private String gender;
 
-    public Person() {}
+    public PersonVO() {}
 
     public Long getId() {
         return id;
